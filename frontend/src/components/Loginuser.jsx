@@ -15,11 +15,11 @@ const Loginuser = () => {
 
   const addHandler = () => {
     axios
-      .post("http://localhost:4000/user/login", user)
+      .post("http://localhost:4000/auth/user/login", user)
       .then((res) => {
-        if (res.data.message === "User Login success") {
-          alert(res.data.message);
+        if (res.data.message === "User login success") {
           navigate("/viewemployees");
+    
         } else {
           alert(res.data.message);
         }

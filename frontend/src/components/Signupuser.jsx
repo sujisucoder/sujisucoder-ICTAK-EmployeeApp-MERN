@@ -23,7 +23,7 @@ const Signupuser = () => {
         navigate("/viewemployees"); 
       })
       .catch((err) => {
-        console.log(err);
+        console.log("error from front signup",err);
       });
   };
 

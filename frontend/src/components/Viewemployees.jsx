@@ -63,7 +63,7 @@ const ViewEmployees = () => {
                         float: "right",
                         marginTop: "1px",
                         marginBottom: "12px",
-                        backgroundColor: "orange",
+                        backgroundColor: "red",
                         color: "white",
                     }}
                     onClick={handleAddEmployee}

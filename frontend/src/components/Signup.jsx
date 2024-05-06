@@ -16,7 +16,7 @@ const Signup = () => {
   const addHandler = () => {
     console.log("clicked", users);
     axios
-      .post("http://localhost:4000/admin", users)
+      .post("http://localhost:4000/auth/admin/signup", users)
       .then((res) => {
         console.log(res);
         alert(res.data.message);

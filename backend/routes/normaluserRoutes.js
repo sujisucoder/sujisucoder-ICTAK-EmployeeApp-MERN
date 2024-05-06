@@ -7,6 +7,7 @@ router.use(express.json())
 router.post('/signup', async (req, res) => {
     try {
         const userData = req.body;
+        console.log("this is user",userData);
         const newUser = await UserModel.create(userData); 
         res.status(200).send({ message: "User Added" });
     } catch (error) {

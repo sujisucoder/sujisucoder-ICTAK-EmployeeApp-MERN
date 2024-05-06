@@ -7,16 +7,22 @@ router.use(express.json())
 function verifyToken(req, res, next) {
     try {
         const token = req.headers.token;
+        console.log("this is token",token);
         if (!token) {
+            console.log("no token");
             throw 'Unauthorized Access';
         }
-        let payload = jwt.verify(token, 'reactblogapp');
+        console.log("before payload","this is jwt secret",process.env.JWT_SECRET);
+        let payload = jwt.verify(token, process.env.JWT_SECRET);
+        console.log("after payload",payload);
         if (!payload) {
+            console.log("no payload");
             throw 'Unauthorized Access';
         }
         next();
     } catch (error) {
         res.status(401).send(error); 
+        console.log("this is token error",error);
     }
 }
 

@@ -12,7 +12,7 @@ const AddEmployee = () => {
   };
 
   const addData = () => {
-    console.log(post);
+    console.log("post data",post);
     axiosInstance
       .post("http://localhost:4000/admin/add", post)
       .then((res) => {
@@ -31,7 +31,7 @@ const AddEmployee = () => {
         justifyContent: "center",
         alignItems: "center",
         minHeight: "calc(100vh - 64px)",
-          backgroundImage: "radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% )",
+        backgroundImage:`url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
         padding: "20px",
       }}
     >

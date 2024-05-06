@@ -14,14 +14,16 @@ const Login = () => {
   };
 
   const addHandler = () => {
-    axios.post("http://localhost:4000/admin/loginadmin", user)
+    axios.post("http://localhost:4000/auth/admin/login", user)
       .then((res) => {
-        if (res.data.message === "login success") {
+        if (res.data.message === "Admin login success") {
           alert(res.data.message);
           console.log(res.data.token);
           sessionStorage.setItem('userToken', res.data.token);
+          console.log("if part");
           navigate('/employees');
         } else {
+          console.log("else part");
           alert(res.data.message);
         }
       })
